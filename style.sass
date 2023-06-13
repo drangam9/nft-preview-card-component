@@ -1,0 +1,91 @@
+$card-bg: hsl(214, 50%, 16%)
+$page-bg: hsl(216, 55%, 11%)
+$cyan: hsl(178, 100%, 50%)
+$soft-blue: hsla(215, 51%, 70%)
+$white: rgb(236, 236, 236)
+$fonts: 'Outfit', sans-serif
+.flex
+    display: flex
+.column
+    flex-direction: column
+.center
+    justify-content: center
+    align-items: center
+
+html, body
+    margin: 0
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: $page-bg
+    color: $white
+    font-family: $fonts
+    font-size: 18px
+p
+    color: $soft-blue
+    margin: 0px
+    opacity: 0.8
+.main-card
+    padding: 20px
+    border-radius: 15px
+    background-color: $card-bg
+    max-width: 350px
+.background
+    width: 100%
+    height: 100%
+    position: relative
+    img
+        width: 100%
+
+#card-photo-hover
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 350px
+    background-color: $cyan
+    opacity: 0
+    transition: opacity 0.3s ease-in-out
+    display: flex
+    justify-content: center
+    align-items: center
+    &:hover
+        opacity: 0.5
+
+    img
+        max-width: 20%
+        max-height: 20%
+
+.info
+    padding: 20px 0px
+    font-weight: bold
+.price
+    margin-right: auto
+    p
+        color: $cyan
+.price, .time-left
+    align-items: center
+    img
+        height: 20px
+        margin-right: 5px
+.author
+    padding: 10px 0px
+    border-top: 1px solid hsla(0, 100%, 100%,0.2 )
+    align-items: center
+    font-size: 16px
+    img
+        margin-right: 10px
+        width: 30px
+        height: 30px
+        border: 1px solid $white
+        border-radius: 50px
+span
+    color: white
+    opacity: 1
+h3
+    width: 50%
+span:hover
+    color: $cyan
+    transition: 0.2s ease-in-out
+    cursor: pointer
